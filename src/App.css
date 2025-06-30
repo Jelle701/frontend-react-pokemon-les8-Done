@@ -1,1 +1,138 @@
-/*Schrijf hier jouw eigen CSS!*/
+/* --- App.css (opgeschoond & verbeterd) --- */
+
+/* Algemene layout */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7c62f !important;
+    color: #222 !important;
+}
+
+.app {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+img.logo {
+    width: 250px;
+    margin-bottom: 2rem;
+}
+
+/* Paginatie */
+.pagination {
+    margin: 1rem auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pagination button {
+    padding: 0.5rem 1.5rem;
+    background-color: #356abc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #2a4e9c;
+}
+
+.pagination button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+/* Pokémon kaarten */
+.pokemon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.pokemon-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 200px;
+    transition: transform 0.2s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-4px);
+}
+
+.pokemon-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.pokemon-card h2 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+}
+
+.pokemon-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.pokemon-card strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+/* Loader */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7c62f;
+    z-index: 999;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3b4cca;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error styling */
+.error {
+    text-align: center;
+    margin: 2rem;
+    color: red;
+}
+
+.error button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3b4cca;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
